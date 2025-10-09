@@ -1,0 +1,40 @@
+
+name: CI/CD Pipeline for WordPress
+
+# 🔹 Ce workflow se déclenche à chaque push sur la branche main
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # GitHub utilisera une machine Ubuntu virtuelle
+
+    steps:
+      # Étape 1 : Récupérer ton code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Étape 2 : Connexion à Docker Hub
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Étape 3 : Build de ton image Docker
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/wordpress-k8s:latest .
+
+      # Étape 4 : Push de l’image sur DockerHub
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/wordpress-k8s:latest
+
+      # (Optionnel) Étape 5 : Déploiement automatique sur Kubernetes
+      # - name: Deploy to Kubernetes
+      #   run: |
+      #     kubectl apply -f k8s/
+
+                                                            
