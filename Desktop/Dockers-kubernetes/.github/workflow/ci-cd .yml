@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Étape 2 : Connexion à Docker Hub
+      # Étape 2 : Connecter  à Docker Hub
       - name: Login to DockerHub
         uses: docker/login-action@v3
         with:
