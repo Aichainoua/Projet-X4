@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest   # GitHub utilisera une machine Ubuntu virtuelle
 
     steps:
-      # Étape 1 : Récuperation du code
+      # Étape 1 : Récuperer le code 
       - name: Checkout repository
         uses: actions/checkout@v4
 
