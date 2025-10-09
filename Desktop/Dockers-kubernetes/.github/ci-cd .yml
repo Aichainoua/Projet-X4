@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest   # GitHub utilisera une machine Ubuntu virtuelle
 
     steps:
-      # Étape 1 : Récupérer ton code
+      # Étape 1 : Récuperation du code
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -37,4 +37,3 @@ jobs:
       #   run: |
       #     kubectl apply -f k8s/
 
-                                                            
