@@ -24,4 +24,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/wordpress-kubernetes:latest
+          tags: aichainoua/wordpress-kubernetes:latest
