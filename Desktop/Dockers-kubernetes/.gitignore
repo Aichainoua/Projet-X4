@@ -1,1 +1,79 @@
+# =========================
+# 🌍 Node, npm, Yarn
+# =========================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# =========================
+# 🐳 Docker
+# =========================
+*.log
+*.pid
+*.seed
+*.bak
+*.swp
+docker-compose.override.yml
 .env
+.env.local
+
+# =========================
+# ⚙️ Kubernetes
+# =========================
+*.tmp
+*.out
+*.lock
+k8s/*.tmp
+kubernetes/*.tmp
+
+# =========================
+# 💾 Bases de données
+# =========================
+*.sql
+*.sql.gz
+*.db
+*.sqlite
+
+# =========================
+# 🧩 WordPress
+# =========================
+wp-content/uploads/
+wp-config.php
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/ai1wm-backups/
+wp-content/debug.log
+
+# =========================
+# 🧰 IDE & Système
+# =========================
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# =========================
+# 🔐 Secrets et clés
+# =========================
+secrets/
+*.key
+*.pem
+*.crt
+
+# =========================
+# 🚀 Build & CI/CD
+# =========================
+/dist/
+build/
+.cache/
+coverage/
+.github/workflows/.DS_Store
+
+# =========================
+# 🧰 Autres fichiers temporaires
+# =========================
+tmp/
+logs/
+*.tmp
+
