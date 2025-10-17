@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+# pour la configuration de Docker
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
